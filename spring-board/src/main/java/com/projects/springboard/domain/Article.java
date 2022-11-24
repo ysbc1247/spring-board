@@ -10,7 +10,10 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Objects;
+
 @Getter
+
 @ToString
 @Table(indexes = {
         @Index(columnList = "title"),
@@ -18,6 +21,8 @@ import java.time.LocalDateTime;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
+@Entity
+
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,6 +38,7 @@ public class Article {
     @LastModifiedDate @Column(nullable = false) private LocalDateTime modifiedAt;
     @LastModifiedBy @Column(nullable = false, length = 100  ) private String modifiedBy;
 
+    protected Article(){}
     private Article(String title, String content, String hashtag){
         this.title = title;
         this.content = content;
@@ -41,5 +47,18 @@ public class Article {
 
     public static Article of(String title, String content, String hashtag) {
         return new Article(title, content, hashtag);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Article article = (Article) o;
+        return id != null && id.equals(article.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
