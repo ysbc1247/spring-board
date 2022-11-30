@@ -17,6 +17,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import static org.assertj.core.api.Assertions.*;
 
+@ActiveProfiles("testdb")
+
 @DisplayName("JPA connection test")
 @Import(JpaConfig.class)
 @DataJpaTest
