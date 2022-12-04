@@ -8,8 +8,14 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/AuditingFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/ArticleComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/ArticleComment.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/springboard/repository/ArticleCommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/repository/ArticleCommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/springboard/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/repository/ArticleRepository.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +123,7 @@
       </set>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Gradle.JpaRepositoryTest">
     <configuration name="data.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/data.sql" />
@@ -124,6 +131,9 @@
       <data-source id="818eabcf-51ce-4e64-9ed6-7d6dc84f7490" namespace="schema/&quot;board&quot;" />
       <method v="2" />
     </configuration>
+=======
+  <component name="RunManager" selected="Spring Boot.SpringBoardApplication">
+>>>>>>> Stashed changes
     <configuration name="JpaRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -216,22 +226,26 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SpringBoardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
-      <option name="DEBUG_MODE" value="true" />
+    <configuration name="SpringBoardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="spring-board.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.projects.springboard.SpringBoardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projects.springboard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringBoardApplication" />
         <item itemvalue="Gradle.JpaRepositoryTest" />
         <item itemvalue="Gradle.JpaRepositoryTest.givenTestData_whenDeleting_thenWorksFine" />
         <item itemvalue="Gradle.JpaRepositoryTest.givenTestData_whenUpdating_thenWorksFine" />
         <item itemvalue="Gradle.JpaRepositoryTest.givenTestData_whenSelecting_thenWorksFine" />
-        <item itemvalue="Database Script.data.sql" />
       </list>
     </recent_temporary>
   </component>
