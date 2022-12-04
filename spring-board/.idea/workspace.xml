@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03092405-3e8c-496b-92b1-3695c15c8900" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/AuditingFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/ArticleComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/springboard/domain/ArticleComment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +46,8 @@
       <list>
         <option value="com.haulmont.jpb.NewClass" />
         <option value="com.haulmont.jpb.JpaRepository" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,7 +117,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBoardApplication">
+  <component name="RunManager" selected="Gradle.JpaRepositoryTest">
     <configuration name="data.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/data.sql" />
       <script-mode>FILE</script-mode>
@@ -245,7 +247,7 @@
       <workItem from="1669008722132" duration="249000" />
       <workItem from="1669009114876" duration="5113000" />
       <workItem from="1669099607069" duration="549000" />
-      <workItem from="1669270994085" duration="15150000" />
+      <workItem from="1669270994085" duration="16116000" />
     </task>
     <servers />
   </component>
