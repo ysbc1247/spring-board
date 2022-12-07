@@ -1,5 +1,6 @@
 package com.projects.springboard.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-
+@Disabled("Spring rest data test is unnecessary")
 @DisplayName("DataRestTest")
 @Transactional
 @AutoConfigureMockMvc
