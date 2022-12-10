@@ -1,5 +1,6 @@
 package com.projects.springboard.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,35 +22,44 @@ class ArticleControllerTest {
         public ArticleControllerTest(@Autowired MockMvc mvc){
             this.mvc = mvc;
         }
+
+        @Disabled("implementing")
         @Test
         @DisplayName("[view][GET] Article List - 정상 호출")
         public void givenNothing_whenRequestingArticlesView_thenReturnsArticlesView() throws Exception {
             mvc.perform(get("/articles"))
                     .andExpect(status().isOk())
                     .andExpect(content().contentType(MediaType.TEXT_HTML))
-                    .andExpect(model().attributeExists("articles"));
+                    .andExpect(view().name("articles/index"))
+                    .andExpect(model().attributeExists("articles"))
+                    .andExpect(model().attributeExists("articleComments"));
         }
-
+    @Disabled("implementing")
     @Test
     @DisplayName("[view][GET] Article Specific List - 정상 호출")
     public void givenNothing_whenRequestingArticlesSpecificView_thenReturnsArticlesSpecificView() throws Exception {
         mvc.perform(get("/articles/1"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.TEXT_HTML))
+                .andExpect(view().name("articles/detail"))
                 .andExpect(model().attributeExists("articles"));
     }
+    @Disabled("implementing")
     @Test
     @DisplayName("[view][GET] Article Looking up Page - 정상 호출")
     public void givenNothing_whenRequestingArticlesSearchView_thenReturnsArticlesSearchView() throws Exception {
         mvc.perform(get("/articles/search"))
                 .andExpect(status().isOk())
+                .andExpect(view().name("articles/search"))
                 .andExpect(content().contentType(MediaType.TEXT_HTML));
     }
+    @Disabled("implementing")
     @Test
     @DisplayName("[view][GET] Article Hashtag Search - 정상 호출")
     public void givenNothing_whenRequestingHashtagSearchView_thenReturnsHashtagSearchView() throws Exception {
         mvc.perform(get("/articles/search-hashtag"))
                 .andExpect(status().isOk())
+                .andExpect(view().name("articles/hashtag"))
                 .andExpect(content().contentType(MediaType.TEXT_HTML));
     }
 }
