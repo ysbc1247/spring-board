@@ -23,16 +23,16 @@ class ArticleControllerTest {
             this.mvc = mvc;
         }
 
-        @Disabled("implementing")
+        
         @Test
         @DisplayName("[view][GET] Article List - 정상 호출")
         public void givenNothing_whenRequestingArticlesView_thenReturnsArticlesView() throws Exception {
             mvc.perform(get("/articles"))
                     .andExpect(status().isOk())
-                    .andExpect(content().contentType(MediaType.TEXT_HTML))
+                    .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                     .andExpect(view().name("articles/index"))
-                    .andExpect(model().attributeExists("articles"))
-                    .andExpect(model().attributeExists("articleComments"));
+                    .andExpect(model().attributeExists("articles"));
+
         }
 
         @Disabled("implementing")
