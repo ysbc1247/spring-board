@@ -43,7 +43,9 @@ class ArticleControllerTest {
                     .andExpect(status().isOk())
                     .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                     .andExpect(view().name("articles/detail"))
-                    .andExpect(model().attributeExists("articles"));
+                    .andExpect(model().attributeExists("articles"))
+                    .andExpect(model().attributeExists("articleComments"));
+
         }
         @Disabled("implementing")
         @Test
