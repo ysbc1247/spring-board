@@ -35,17 +35,18 @@ class ArticleControllerTest {
 
         }
 
-        @Disabled("implementing")
+        @DisplayName("[view][GET] 게시글 상세 페이지 - 정상 호출")
         @Test
-        @DisplayName("[view][GET] Article Specific List - 정상 호출")
-        public void givenNothing_whenRequestingArticlesSpecificView_thenReturnsArticlesSpecificView() throws Exception {
-            mvc.perform(get("/articles/1"))
-                    .andExpect(status().isOk())
-                    .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-                    .andExpect(view().name("articles/detail"))
-                    .andExpect(model().attributeExists("articles"))
-                    .andExpect(model().attributeExists("articleComments"));
+        public void givenNothing_whenRequestingArticleView_thenReturnsArticleView() throws Exception {
+                // Given
 
+                // When & Then
+                mvc.perform(get("/articles/1"))
+                        .andExpect(status().isOk())
+                        .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+                        .andExpect(view().name("articles/detail"))
+                        .andExpect(model().attributeExists("article"))
+                        .andExpect(model().attributeExists("articleComments"));
         }
         @Disabled("implementing")
         @Test
