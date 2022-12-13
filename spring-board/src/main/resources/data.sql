@@ -119,3 +119,7 @@ insert into article_Comment (content, created_at, created_by, modified_at, modif
 insert into article_Comment (content, created_at, created_by, modified_at, modified_by, article_id) values ('Etiam justo.', '2022-02-05 18:54:33', 'Pechet', '2022-11-04 15:13:05', 'Rohlf', 8);
 insert into article_Comment (content, created_at, created_by, modified_at, modified_by, article_id) values ('In hac habitasse platea dictumst.', '2022-06-07 03:38:08', 'Sturdy', '2022-04-23 18:00:28', 'Krahl', 17);
 # Rows:
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+    ('uno', 'asdf1234', 'Uno', 'uno@mail.com', 'I am Uno.', now(), 'uno', now(), 'uno')
+;
+

@@ -13,7 +13,10 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.transaction.annotation.Transactional;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 @Disabled("Spring rest data test is unnecessary")
 @DisplayName("DataRestTest")
 @Transactional
@@ -29,7 +32,7 @@ public class DataRestTest {
     @Test
     void givenNothing_whenRequestingArticles_thenReturnsJsonResponse() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/api/articles"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.valueOf("application/hal+json")));
 
 
@@ -38,7 +41,7 @@ public class DataRestTest {
     @Test
     void givenNothing_whenRequestingArticlesByOne_thenReturnsJsonResponse() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/api/articles/1"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.valueOf("application/hal+json")));
 
 
@@ -47,7 +50,7 @@ public class DataRestTest {
     @Test
     void givenNothing_whenRequestingArticleCommentsFromArticle_thenReturnsJsonResponse() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/api/articles/1/articleComments"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.valueOf("application/hal+json")));
 
 
@@ -56,7 +59,7 @@ public class DataRestTest {
     @Test
     void givenNothing_whenRequestingArticlesComments_thenReturnsJsonResponse() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/api/articleComments"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.valueOf("application/hal+json")));
 
 
@@ -65,7 +68,23 @@ public class DataRestTest {
     @Test
     void givenNothing_whenRequestingArticlesComment_thenReturnsJsonResponse() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/api/articleComments/1"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.valueOf("application/hal+json")));
     }
+    @DisplayName("[api] 회원 관련 API 는 일체 제공하지 않는다.")
+    @Test
+    void givenNothing_whenRequestingUserAccounts_thenThrowsException() throws Exception {
+        // Given
+
+        // When & Then
+        mvc.perform(get("/api/userAccounts")).andExpect(status().isNotFound());
+        mvc.perform(post("/api/userAccounts")).andExpect(status().isNotFound());
+        mvc.perform(put("/api/userAccounts")).andExpect(status().isNotFound());
+        mvc.perform(patch("/api/userAccounts")).andExpect(status().isNotFound());
+        mvc.perform(delete("/api/userAccounts")).andExpect(status().isNotFound());
+        mvc.perform(head("/api/userAccounts")).andExpect(status().isNotFound());
+    }
+
+
+
 }
