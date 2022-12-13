@@ -66,4 +66,5 @@ class ArticleControllerTest {
                     .andExpect(view().name("articles/hashtag"))
                     .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML));
         }
+
 }
